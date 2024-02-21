@@ -1,0 +1,33 @@
+#此项告诉插件哪些快捷栏是违规的
+#要求 1-9之间的数字
+violate:
+  - 6
+  - 7
+  - 8
+  - 9
+#此序号为切换之前的快捷栏
+#切换到违规快捷栏时
+#执行以下操作
+#implement 仅能填写 back cancel 和 toggle
+#实现方式为
+#        back 和 cancel 仅填写implement即可 不填写 toggle
+#        back   实现为 当点击到违规快捷栏时 撤回此次点击
+#        cancel 实现为 直接取消此次事件(该实现方法会导致其他插件可能监听不到切换事件 建议使用back)
+#        toggle 需要额外填写toggle参数 参数值为违规切换之后强制切换的快捷栏
+#        toggle 应在1-9之中
+limit:
+  1:
+    implement: back
+    toggle: 5
+  2:
+    implement: back
+    toggle: 5
+  3:
+    implement: back
+    toggle: 5
+  4:
+    implement: back
+    toggle: 5
+  5:
+    implement: back
+    toggle: 5
